@@ -1,10 +1,10 @@
 import { data } from '../../data/Data';
-import "./Navbar.css";
+import "./Pricing.css";
 
-function Navbar() {
+function Pricing() {
 
 // isi semua kode disini dan di file CSS buat urusan DESIGN
 // dan di data/Data.js untuk urusan DATA 
 
 }
-export default Navbar;
+export default Pricing;

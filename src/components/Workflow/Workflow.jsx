@@ -1,10 +1,10 @@
 import { data } from '../../data/Data';
-import "./Navbar.css";
+import "./Workflow.css";
 
-function Navbar() {
+function Workflow() {
 
 // isi semua kode disini dan di file CSS buat urusan DESIGN
 // dan di data/Data.js untuk urusan DATA 
 
 }
-export default Navbar;
+export default Workflow;
