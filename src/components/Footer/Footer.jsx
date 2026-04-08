@@ -3,9 +3,15 @@ import "./Footer.css";
 
 function Footer() {
 
-// isi semua kode disini dan di file CSS buat urusan DESIGN
-// dan di data/Data.js untuk urusan DATA 
-// REMINDER: jangan lupa pake tag pembungkus <footer> </footer>
+    // siapin logic-logic JS disini
 
+    return (
+        <footer>
+
+            {/* isi semua kode disini dan di file CSS buat urusan DESIGN */}
+            {/* dan di data/Data.js untuk urusan DATA */}
+            
+        </footer>
+    )
 }
 export default Footer;

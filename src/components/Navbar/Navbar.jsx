@@ -3,8 +3,15 @@ import "./Navbar.css";
 
 function Navbar() {
 
-// isi semua kode disini dan di file CSS buat urusan DESIGN
-// dan di data/Data.js untuk urusan DATA 
+    // siapin logic-logic JS disini
 
+    return (
+        <nav>
+
+            {/* isi semua kode disini dan di file CSS buat urusan DESIGN */}
+            {/* dan di data/Data.js untuk urusan DATA */}
+            
+        </nav>
+    )
 }
 export default Navbar;
