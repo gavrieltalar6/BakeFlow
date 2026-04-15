@@ -1,0 +1,56 @@
+.navbar {
+  position: fixed; /* Biar nempel terus di atas walau di-scroll */
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: left;
+  padding: 20px 5%;
+  transition: 0.4s;
+  z-index: 1000;
+  background-color: var(--bg-white);
+}
+
+/* Ini efek sakti: Kalau sudah scroll > 60px, class ini bakal aktif */
+.navbar.scrolled {
+  background-color: rgba(255, 255, 255, 0.95); /* Putih agak transparan */
+  padding: 15px 10%; /* Navbar jadi agak mengecil biar estetik */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.nav-logo {
+  font-size: 24px;
+  margin-right: 5vw; /* Jarak antara logo dan menu pertama */
+} 
+.nav-links {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 60px;
+  list-style: none;
+}
+
+.nav-links li {
+  cursor: pointer;
+  font-weight: 550;
+  font-size: 20px;
+  color: #333;
+}
+
+.menu-icon {
+  display: block; /* Ganti dari 'none' ke 'block' buat ngetes doang */
+  margin-left: auto; /* Ini yang dorong dia ke kanan */
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 30px; /* Biar kelihatan gede */
+  color: var(--accent-pink);
+  z-index: 1001;
+}
+
+/* Sembunyikan HANYA kalau layar lebar banget */
+@media (min-width: 1025px) {
+.menu-icon { display: none; }
+}
