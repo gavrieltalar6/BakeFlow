@@ -1,32 +1,25 @@
+import { Routes, Route } from 'react-router-dom';
 import Navbar from "./components/Navbar/Navbar";
-import Hero from "./components/Hero/Hero";
-import Features from "./components/Features/Features";
-import Character from "./components/Character/Character";
-import Workflow from "./components/Workflow/Workflow";
-import Reviews from "./components/Reviews/Reviews";
-import Pricing from "./components/Pricing/Pricing";
-import Articles from "./components/Articles/Articles";
-import Designs from "./components/Designs/Designs";
-import Contact from "./components/Contact/Contact";
 import Footer from "./components/Footer/Footer";
+import Home from "./pages/Home";
+import DesignSys from "./pages/DesignSys.jsx";
 import "./App.css";
 
 function App() {
   return (
     <div className="app">
-      <Navbar />
+      <Navbar /> 
       <main>
-        <Hero />
-        <Features />
-        <Character />
-        <Workflow />
-        <Reviews />
-        <Pricing />
-        <Articles />
-        <Contact />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          
+          {/* Jalur ke halaman baru kamu */}
+          <Route path="/design-system" element={<DesignSys />} />
+        </Routes>
       </main>
-        <Footer />
+      <Footer />
     </div>
   );  
 }
+
 export default App;
