@@ -35,43 +35,20 @@ function Character() {
     const handleMouseMove = (e) => {
 
       const currentX = e.clientX;
+      const deltaPixel = currentX - lastX;
 
-      const delta = currentX - lastX;
-
-
-
-      // 👉 arah gerakan
-
-      if (delta > 2) {
-
-        setDirection("right");
-
-      } else if (delta < -2) {
-
-        setDirection("left");
-
-      }
-
-
-
-      // 👉 gerakan karakter (ngejar cursor)
+      if (deltaPixel > 2) setDirection("right");
+      else if (deltaPixel < -2) setDirection("left");
 
       setOffsetX((prev) => {
+        const containerWidth = window.innerWidth;
+        const deltaPercent = (deltaPixel / containerWidth) * 100;
+        const limit = 80;
 
-        let next = prev + delta * 0.3;
-
-
-
-        // batasi biar gak kabur
-
-        const limit = 150;
-
+        let next = prev + deltaPercent * 3;
         if (next > limit) next = limit;
 
         if (next < -limit) next = -limit;
-
-
-
         return next;
 
       });
@@ -79,27 +56,36 @@ function Character() {
 
 
       lastX = currentX;
-
-
-
-      // 👉 kalau mouse berhenti → balik ke depan
-
       clearTimeout(timeout);
+      timeout = setTimeout(() => setDirection("center"), 120);
+    };
 
-      timeout = setTimeout(() => {
+    // --- scroll (mobile) ---
+    let lastScrollY = window.scrollY;
 
-        setDirection("center");
-
-      }, 120);
-
+    const handleScroll = () => {
+      const scrollY = window.scrollY;
+      const maxScroll = document.body.scrollHeight - window.innerHeight;
+      const scrollPercent = (scrollY / maxScroll) * 100;
+      const target = (scrollPercent / 100) * 160 - 80;
+      const deltaScroll = scrollY - lastScrollY;
+      if (deltaScroll > 0) setDirection("right");
+      else if (deltaScroll < 0) setDirection("left");
+      setOffsetX(target);
+      lastScrollY = scrollY;
+      clearTimeout(timeout);
+      timeout = setTimeout(() => setDirection("center"), 120);
     };
 
 
 
     window.addEventListener("mousemove", handleMouseMove);
+    window.addEventListener("scroll", handleScroll);
 
-    return () => window.removeEventListener("mousemove", handleMouseMove);
-
+    return () => {
+      window.removeEventListener("mousemove", handleMouseMove);
+      window.removeEventListener("scroll", handleScroll);
+    };
   }, []);
 
 
@@ -141,9 +127,7 @@ function Character() {
         className="character"
 
         style={{
-
-          transform: `translateX(calc(-50% + ${offsetX}px))`,
-
+          transform: `translateX(calc(-50% + ${offsetX}%))`,
         }}
 
       />

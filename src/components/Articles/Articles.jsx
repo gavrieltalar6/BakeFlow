@@ -1,7 +1,7 @@
 import { data } from '../../data/Data';
-import "./Designs.css";
+import "./Articles.css";
 
-function Designs() {
+function Articles() {
 
     // siapin logic-logic JS disini
 
@@ -14,4 +14,4 @@ function Designs() {
         </section>
     )
 }
-export default Designs;
+export default Articles;
