@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Delius+Swash+Caps&family=Delius+Unicase:wght@400;700&display=swap');
 .contact-wrapper {
   display: flex;
-  flex-direction: column; /* Biar judul di atas, amplop di bawah */
+  flex-direction: column;
   justify-content: center; 
   align-items: center;     
   min-height: 100vh;      
@@ -11,10 +11,9 @@
   padding: 50px 0;
 }
 
-/* Gunakan Delius Unicase untuk Judul */
 .contact-title {
   font-family: 'Delius Unicase', cursive;
-  font-weight: 700; /* Bold untuk judul */
+  font-weight: 700;
   color: #ffffff;
   font-size: 3rem;
   margin-bottom: 50px;
