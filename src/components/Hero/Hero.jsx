@@ -7,12 +7,9 @@ import { FiBox, FiMousePointer, FiCloud, FiPieChart } from "react-icons/fi";
 function Hero() {
   return (
     <section className="hero" id="hero">
-      
-      {/* Dekorasi gambar */}
       <img src={cakeLeft} alt="cake" className="hero-cake left" />
       <img src={cakeRight} alt="cake" className="hero-cake right" />
 
-      {/* Content utama */}
       <div className="hero-content">
         <h1>
           RUN YOUR BAKERY WITH<br />
