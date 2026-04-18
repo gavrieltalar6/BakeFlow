@@ -1,11 +1,11 @@
 import Navbar from "./components/Navbar/Navbar";
 import Hero from "./components/Hero/Hero";
-import Character from "./components/Character/Character";
 import Features from "./components/Features/Features";
-import Solutions from "./components/Solutions/Solutions";
-import Reviews from "./components/Reviews/Reviews";
+import Character from "./components/Character/Character";
 import Workflow from "./components/Workflow/Workflow";
+import Reviews from "./components/Reviews/Reviews";
 import Pricing from "./components/Pricing/Pricing";
+import Articles from "./components/Articles/Articles";
 import Designs from "./components/Designs/Designs";
 import Contact from "./components/Contact/Contact";
 import Footer from "./components/Footer/Footer";
@@ -17,13 +17,12 @@ function App() {
       <Navbar />
       <main>
         <Hero />
-        <Character />
         <Features />
-        <Solutions />
-        <Reviews />
+        <Character />
         <Workflow />
+        <Reviews />
         <Pricing />
-        <Designs />
+        <Articles />
         <Contact />
       </main>
         <Footer />
