@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+// import namafilenya from '../assets/images/namafile.png';  ----- contoh kalo perlu import sesuatu dari asset
 
 const DesignSys = () => {
   return (
