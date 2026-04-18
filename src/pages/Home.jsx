@@ -5,7 +5,6 @@ import Workflow from "../components/Workflow/Workflow";
 import Reviews from "../components/Reviews/Reviews";
 import Pricing from "../components/Pricing/Pricing";
 import Articles from "../components/Articles/Articles";
-import Designs from "../components/Designs/Designs";
 import Contact from "../components/Contact/Contact";
 
 function Home() {
