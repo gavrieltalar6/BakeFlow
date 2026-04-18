@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Delius+Swash+Caps&family=Delius+Unicase:wght@400;700&display=swap');
+.contact-wrapper {
+  display: flex;
+  flex-direction: column; /* Biar judul di atas, amplop di bawah */
+  justify-content: center; 
+  align-items: center;     
+  min-height: 100vh;      
+  width: 100%;            
+  background-color: #f2a6c2; 
+  position: relative;     
+  padding: 50px 0;
+}
+
+/* Gunakan Delius Unicase untuk Judul */
+.contact-title {
+  font-family: 'Delius Unicase', cursive;
+  font-weight: 700; /* Bold untuk judul */
+  color: #ffffff;
+  font-size: 3rem;
+  margin-bottom: 50px;
+}
+
+.contact-form input, 
+.contact-form textarea,
+.contact-form button,
+.letter {
+  font-family: 'Delius Swash Caps', cursive;
+  font-weight: 400;
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+  font-family: 'Delius Swash Caps', cursive;
+}
+
+.envelope-container {
+  position: relative;
+  width: 450px;
+  height: 300px;
+  cursor: pointer;
+  background-color: transparent;
+  margin: 100px auto; 
+  transition: transform 0.4s ease;
+  overflow: visible !important;
+}
+
+.letter {
+  position: absolute;
+  bottom: -5px; 
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90%;
+  height: 80%; 
+  background: white;
+  padding: 20px;
+  box-sizing: border-box;
+  transition: all 0.7s ease-in-out;
+  z-index: 2; 
+  border-radius: 5px;
+  overflow: hidden; 
+}
+
+.open .letter {
+  transform: translate(-50%, -200px); 
+  height: 500px; 
+  z-index: 10; 
+  overflow: visible;
+  box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+}
+
+.envelope-front {
+  position: absolute;
+  bottom: 0;
+  width: 0;
+  height: 0;
+  border-right: 225px solid #f9c7db;
+  border-bottom: 150px solid #f9c7db;
+  border-left: 225px solid #f4aec9;
+  border-top: 150px solid transparent;
+  z-index: 4;
+}
+
+.envelope-flap {
+  position: absolute;
+  top: 0;
+  width: 0;
+  height: 0;
+  border-left: 225px solid transparent;
+  border-right: 225px solid transparent;
+  border-top: 160px solid #ff6090; 
+  z-index: 5; 
+  transform-origin: top;
+  transition: all 0.4s ease;
+}
+
+.open .envelope-flap {
+  transform: rotateX(180deg);
+  z-index: 1;
+}
+
+
+.open .letter {
+  transform: translate(-50%, -200px) scale(1.05); 
+  height: 500px;
+  z-index: 10; 
+  box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.contact-form input, .contact-form textarea {
+  border: none;
+  border-bottom: 2px solid #ffc1d6;
+  padding: 10px 5px;
+  outline: none;
+  color: #ff6090;
+  background: transparent;
+}
+
+.contact-form button {
+  background-color: #ffe4ed;
+  color: #ff6090;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 10px;
+}
