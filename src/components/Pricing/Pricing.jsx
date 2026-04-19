@@ -36,20 +36,20 @@ const Pricing = () => {
       title: 'STANDARD',
       price: '19.99',
       image: '/cat-with-cupcake.png',
-      features: ['fitur', 'fitur', 'fitur']
+      features: ['Warehouse', 'Dashboard', 'Cashier']
     },
     {
       title: 'MEDIUM',
       price: '29.99',
       image: '/cat-with-box.png',
-      features: ['fitur', 'fitur', 'fitur', 'fitur']
+      features: ['Warehouse', 'Dashboard', 'Cashier', 'Auto-Restock']
     },
 
    {
     title: 'FULL',
     price: '39.99',
     image: '/cat-with-computer.png',
-    features: ['fitur', 'fitur', 'fitur', 'fitur', 'fitur']
+    features: ['Warehouse', 'Dashboard', 'Cashier', 'Auto-Restock', 'Vending Machine']
   }
   ];
 
