@@ -18,11 +18,11 @@ const DesignSys = () => {
         <hr />
 
         {/* COLOR */}
-        <h2>Color</h2>
+        <h2 style={styles.sectionTitle}>Color</h2>
         <img src={colorImg} alt="color" style={styles.image} />
 
         {/* LOGO */}
-        <h2>Logo</h2>
+        <h2 style={styles.sectionTitle}>Logo</h2>
         <img src={logoImg} alt="logo" style={styles.image} />
         <p style={styles.desc}>
           Logo ini dipilih karena langsung menggambarkan produk utama yaitu donat,
@@ -31,19 +31,19 @@ const DesignSys = () => {
         </p>
 
         {/* ICON */}
-        <h2>Icon</h2>
+        <h2 style={styles.sectionTitle}>Icon</h2>
         <img src={iconImg} alt="icon" style={styles.image} />
 
         {/* COMPONENT */}
-        <h2>Component</h2>
+        <h2 style={styles.sectionTitle}>Component</h2>
         <img src={componentImg} alt="component" style={styles.image} />
 
         {/* MOTION */}
-        <h2>Motion</h2>
+        <h2 style={styles.sectionTitle}>Motion</h2>
         <img src={Motion} alt="Motion" style={styles.image} />
 
         {/* PATTERNS */}
-        <h2>Patterns</h2>
+        <h2 style={styles.sectionTitle}>Patterns</h2>
         <p style={styles.desc}>
           Website menggunakan layout vertikal dari atas ke bawah yang terdiri dari
           navbar, hero section, features, pricing, hingga contact. Informasi ditampilkan
@@ -53,7 +53,7 @@ const DesignSys = () => {
         </p>
 
         {/* THEME */}
-        <h2>Theme</h2>
+        <h2 style={styles.sectionTitle}>Theme</h2>
         <p style={styles.desc}>
           Website ini menggunakan tema sweet, playful, dan friendly yang sesuai dengan
           konsep bakery. Warna pastel dan ilustrasi lucu digunakan untuk menciptakan
@@ -62,12 +62,11 @@ const DesignSys = () => {
         </p>
 
         {/* TYPOGRAPHY */}
-        <h2>Typography</h2>
+        <h2 style={styles.sectionTitle}>Typography</h2>
         <p style={styles.desc}>
-          <b>Judul:</b> Delius Unicase digunakan untuk memberikan kesan unik dan santai. <br />
-          <b>Subjudul:</b> Delius Swash Caps memberikan aksen dekoratif. <br />
-          <b>Isi:</b> Menggunakan font sederhana agar tetap mudah dibaca. <br />
-          Ukuran teks menggunakan kelipatan 4 untuk menjaga konsistensi.
+          <b>Judul:</b> Delius Unicase Karena Bentuknya yang bagus dan santai di gunakan untuk menulis Judul <br />
+          <b>Isi:</b> Delius Swash Caps Kami menggunakan font Delius Swash Caps karena memiliki bentuk huruf kapital dengan elemen dekoratif (swash) yang memberikan kesan elegan namun tetap playful. <br />
+          <b>Ukuran teks :</b> menggunakan kelipatan 4 untuk menjaga konsistensi.
         </p>
       </div>
     </section>
@@ -80,40 +79,42 @@ const DesignSys = () => {
 // isi CSSnya disini. Dibawah ini ada contoh. Nanti hapus semua aja kalo udah mau lu isi
 const styles = { 
   container: {
-    padding: '120px 10% 50px', // Jaga jarak dari Navbar
+    padding: '120px 20px 50px',
     minHeight: '100vh',
   },
-  backLink: {
-    textDecoration: 'none',
-    color: '#FFD1DC',
-    fontWeight: 'bold',
-    display: 'inline-block',
-    marginBottom: '20px'
+
+  content: {
+    width: '100%',
+    maxWidth: '900px',
+    margin: '0 auto'
   },
-  content: {},
+
+  sectionTitle: {
+  maxWidth: '600px',
+  margin: '40px auto 10px',
+  textAlign: 'left',
+  color: '#FF77A5'
+  },
+
   title: {
-    color: '#FF77A5'
+    color: '#FFFFFF',
+    
   },
+
   image: {
     width: '100%',
     maxWidth: '600px',
     borderRadius: '10px',
-    marginBottom: '20px'
+    marginBottom: '20px',
+    display: 'block',
+    marginLeft: 'auto',
+    marginRight: 'auto'
   },
-  emptyBox: {
-    width: '100%',
-    maxWidth: '600px',
-    height: '150px',
-    border: '2px dashed #FF77A5',
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'center',
-    borderRadius: '10px',
-    color: '#FF77A5'
-  },
+
   desc: {
     maxWidth: '600px',
-    lineHeight: '1.6'
+    lineHeight: '1.6',
+    margin: '0 auto'
   }
 };
 
