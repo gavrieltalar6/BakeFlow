@@ -4,7 +4,7 @@ import colorImg from '../assets/images/color.png';
 import logoImg from '../assets/images/logo.png';
 import iconImg from '../assets/images/icon.png';
 import componentImg from '../assets/images/component.png';
-import Motion from '../assets/images/Motion.png';
+import Motion from '../assets/images/Motion.gif';
 // import namafilenya from '../assets/images/namafile.png';  ----- contoh kalo perlu import sesuatu dari asset
 
 const DesignSys = () => {
