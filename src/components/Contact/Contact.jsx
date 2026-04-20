@@ -5,7 +5,7 @@ const Contact = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <section className="contact-wrapper">
+    <section className="contact-wrapper" id="contact">
       {/* Tambahkan Judul di sini */}
       <h2 className="contact-title">Contact Us</h2>
 

@@ -1,8 +1,5 @@
-import React from 'react';
-import './Pricing.css';
-
-
-
+import React from "react";
+import "./Pricing.css";
 
 const PricingCard = ({ title, price, image, features }) => {
   return (
@@ -33,35 +30,47 @@ const PricingCard = ({ title, price, image, features }) => {
 const Pricing = () => {
   const tiers = [
     {
-      title: 'STANDARD',
-      price: '19.99',
-      image: '/cat-with-cupcake.png',
-      features: ['Warehouse', 'Dashboard', 'Cashier']
+      title: "STANDARD",
+      price: "19.99",
+      image: "/cat-with-cupcake.png",
+      features: ["Warehouse", "Dashboard", "Cashier"],
     },
     {
-      title: 'MEDIUM',
-      price: '29.99',
-      image: '/cat-with-box.png',
-      features: ['Warehouse', 'Dashboard', 'Cashier', 'Auto-Restock']
+      title: "MEDIUM",
+      price: "29.99",
+      image: "/cat-with-box.png",
+      features: ["Warehouse", "Dashboard", "Cashier", "Auto-Restock"],
     },
 
-   {
-    title: 'FULL',
-    price: '39.99',
-    image: '/cat-with-computer.png',
-    features: ['Warehouse', 'Dashboard', 'Cashier', 'Auto-Restock', 'Vending Machine']
-  }
+    {
+      title: "FULL",
+      price: "39.99",
+      image: "/cat-with-computer.png",
+      features: [
+        "Warehouse",
+        "Dashboard",
+        "Cashier",
+        "Auto-Restock",
+        "Vending Machine",
+      ],
+    },
   ];
 
   return (
-    <div className="pricing-container">
-      <h1 className="main-title">SIMPLE<br />PRICING</h1>
-      <div className="cards-wrapper">
-        {tiers.map((tier, index) => (
-          <PricingCard key={index} {...tier} />
-        ))}
+    <section id="pricing">
+      <div className="pricing-container">
+        <h1 className="main-title">
+          SIMPLE
+          <br />
+          PRICING
+        </h1>
+        <div className="cards-wrapper">
+          {tiers.map((tier, index) => (
+            <PricingCard key={index} {...tier} />
+          ))}
+        </div>
       </div>
-    </div>
+    </section>
   );
 };
 

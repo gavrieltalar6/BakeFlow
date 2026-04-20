@@ -11,36 +11,37 @@ const NAV_LINKS = [
 function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
-  const [pastHero, setPastHero] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
-      const trigger = window.innerHeight;
-
-      setPastHero(window.scrollY > trigger);
       setScrolled(window.scrollY > 60);
     };
-
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   const navigate = (id) => {
     setMenuOpen(false);
+
+    if (id === "hero") {
+      document.body.scrollTo({ top: 0, behavior: "smooth" });
+      return;
+    }
+
     const el = document.getElementById(id);
-    if (el) el.scrollIntoView({ behavior: "smooth" });
+    if (el) {
+      const offset = 80;
+      const top =
+        el.getBoundingClientRect().top + document.body.scrollTop - offset;
+      document.body.scrollTo({ top, behavior: "smooth" });
+    }
   };
 
   return (
-    <nav
-      className={`navbar 
-      ${scrolled ? "scrolled" : ""} 
-      ${pastHero ? "hide" : "show"}`}
-    >
+    <nav className={`navbar ${scrolled ? "scrolled" : ""}`}>
       <div className="nav-logo" onClick={() => navigate("hero")}>
         BakeFlow
       </div>
-
       <ul className={`nav-links ${menuOpen ? "active" : ""}`}>
         {NAV_LINKS.map((link) => (
           <li key={link.id} onClick={() => navigate(link.id)}>
@@ -48,7 +49,6 @@ function Navbar() {
           </li>
         ))}
       </ul>
-
       <div className="menu-icon" onClick={() => setMenuOpen(!menuOpen)}>
         {menuOpen ? <FaTimes /> : <FaBars />}
       </div>

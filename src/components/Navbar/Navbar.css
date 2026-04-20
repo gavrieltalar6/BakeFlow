@@ -23,16 +23,6 @@
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-.navbar.show {
-  transform: translateY(0);
-}
-
-.navbar.hide {
-  transform: translateY(-120%);
-  opacity: 0;
-  pointer-events: none;
-}
-
 .nav-logo {
   font-size: 24px;
   font-weight: bold;
