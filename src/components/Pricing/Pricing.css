@@ -4,8 +4,6 @@ body {
   margin: 0;
   font-family: 'Delius Swash Caps', cursive;
 }
-@import url('https://fonts.googleapis.com/css2?family=Delius+Swash+Caps&family=Delius+Unicase:wght@400;700&display=swap');
-
 body {
   background-color: #ffffff;
   margin: 0;
@@ -104,6 +102,9 @@ body {
 .card-image-container {
   width: 100px;
   height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .card-image {

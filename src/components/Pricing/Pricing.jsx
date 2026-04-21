@@ -37,20 +37,20 @@ const Pricing = () => {
     {
       title: "STANDARD",
       price: "19.99",
-      image: "/cat-with-cupcake.png",
+      image: standardImg,
       features: ["Warehouse", "Dashboard", "Cashier"],
     },
     {
       title: "MEDIUM",
       price: "29.99",
-      image: "/cat-with-box.png",
+      image: mediumImg,
       features: ["Warehouse", "Dashboard", "Cashier", "Auto-Restock"],
     },
 
     {
       title: "FULL",
       price: "39.99",
-      image: "/cat-with-computer.png",
+      image: fullImg,
       features: [
         "Warehouse",
         "Dashboard",
