@@ -96,7 +96,12 @@
   flex-direction: column;
   align-items: center;
   gap: 15px;
-  color: var(--text-dark)
+  color: var(--text-dark);
+  transition: color 0.3s ease;
+}
+
+.feature-item:hover {
+  color: var(--accent-pink);
 }
 
 .feature-item svg {
@@ -104,6 +109,12 @@
   background: #f8c8d8;
   padding: 12px;
   border-radius: 10px;
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.feature-item:hover svg {
+  transform: scale(1.15);
+  background: var(--accent-light);
 }
 
 .feature-item p {
