@@ -3,11 +3,13 @@ import Navbar from "./components/Navbar/Navbar";
 import Footer from "./components/Footer/Footer";
 import Home from "./pages/Home";
 import DesignSys from "./pages/DesignSys.jsx";
+import ScrollToTop from './components/ScrollToTop.jsx';
 import "./App.css";
 
 function App() {
   return (
     <div className="app">
+      <ScrollToTop/>
       <Navbar /> 
       <main>
         <Routes>

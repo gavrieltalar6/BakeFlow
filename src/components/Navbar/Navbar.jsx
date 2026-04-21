@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
+import { useNavigate, useLocation } from "react-router-dom";
 import "./Navbar.css";
 
 const NAV_LINKS = [
@@ -11,6 +12,8 @@ const NAV_LINKS = [
 function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
+  const routerNavigate = useNavigate();
+  const location = useLocation();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -20,14 +23,28 @@ function Navbar() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const navigate = (id) => {
-    setMenuOpen(false);
+  useEffect(() => {
+    if (location.state?.scrollTo) {
+      const id = location.state.scrollTo;
 
-    if (id === "hero") {
-      document.body.scrollTo({ top: 0, behavior: "smooth" });
-      return;
+      setTimeout(() => {
+        if (id === "top") {
+          document.body.scrollTo({ top: 0, behavior: "smooth" });
+          return;
+        }
+
+        const el = document.getElementById(id);
+        if (el) {
+          const offset = 80;
+          const top =
+            el.getBoundingClientRect().top + document.body.scrollTop - offset;
+          document.body.scrollTo({ top, behavior: "smooth" });
+        }
+      }, 100);
     }
+  }, [location]);
 
+  const scrollTo = (id) => {
     const el = document.getElementById(id);
     if (el) {
       const offset = 80;
@@ -37,14 +54,35 @@ function Navbar() {
     }
   };
 
+  const handleNavClick = (id) => {
+    setMenuOpen(false);
+
+    if (location.pathname !== "/") {
+      // Pindah ke Home dulu, bawa target scroll
+      routerNavigate("/", { state: { scrollTo: id } });
+      return;
+    }
+
+    scrollTo(id);
+  };
+
+  const handleLogo = () => {
+    setMenuOpen(false);
+    if (location.pathname !== "/") {
+      routerNavigate("/", { state: { scrollTo: "top" } });
+      return;
+    }
+    document.body.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
   return (
     <nav className={`navbar ${scrolled ? "scrolled" : ""}`}>
-      <div className="nav-logo" onClick={() => navigate("hero")}>
+      <div className="nav-logo" onClick={handleLogo}>
         BakeFlow
       </div>
       <ul className={`nav-links ${menuOpen ? "active" : ""}`}>
         {NAV_LINKS.map((link) => (
-          <li key={link.id} onClick={() => navigate(link.id)}>
+          <li key={link.id} onClick={() => handleNavClick(link.id)}>
             {link.label}
           </li>
         ))}
