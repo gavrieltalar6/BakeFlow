@@ -1,5 +1,11 @@
-import React from "react";
-import "./Pricing.css";
+import React from 'react';
+import './Pricing.css';
+
+
+import standardImg from '../../assets/images/cat-with-box.png';
+import mediumImg from '../../assets/images/cat-with-cupcake.png';
+import fullImg from '../../assets/images/cat-with-computer.png';
+
 
 const PricingCard = ({ title, price, image, features }) => {
   return (
@@ -7,7 +13,6 @@ const PricingCard = ({ title, price, image, features }) => {
       <h2 className="card-title">{title}</h2>
       <div className="card-content">
         <div className="card-image-container">
-          {/* Ganti src dengan path gambar aslimu */}
           <img src={image} alt={title} className="card-image" />
         </div>
         <ul className="feature-list">

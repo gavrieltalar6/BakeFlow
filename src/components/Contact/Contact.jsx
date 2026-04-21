@@ -1,14 +1,29 @@
 import React, { useState } from 'react';
 import './Contact.css';
 
+
+import cupcakeImg from '../../assets/images/cake1.png';
+import cakeImg from '../../assets/images/cake2.png';
+import mangosteenImg from '../../assets/images/cake1.png';
+import StrawberryCake from '../../assets/images/cake2.png';
+
 const Contact = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <section className="contact-wrapper" id="contact">
-      {/* Tambahkan Judul di sini */}
+    <section className="contact-wrapper">
       <h2 className="contact-title">Contact Us</h2>
 
+      <img src={cupcakeImg} className="deco-item cupcake-left" alt="Cupcake" />
+      <img src={cakeImg} className="deco-item cake-right" alt="Cake Slice" />
+      <img src={cupcakeImg} className="deco-item cupcake-bottom" alt="Cupcake Pink" />
+      <img src={mangosteenImg} className="deco-item fruit-small" alt="Decoration" />
+      <img src={cakeImg} className="deco-item cake-bottom-right" alt="Cake Decoration" />
+      <img src={mangosteenImg} className="deco-item deco-mini mini-1" alt="" />
+<img src={cupcakeImg} className="deco-item deco-mini mini-2" alt="" />
+<img src={mangosteenImg} className="deco-item deco-mini mini-3" alt="" />
+
+     
       <div 
         className={`envelope-container ${isOpen ? 'open' : ''}`} 
         onClick={() => setIsOpen(!isOpen)}
@@ -26,13 +41,9 @@ const Contact = () => {
         </div>
 
         <div className="envelope-front">
-
+        
         </div>
       </div>
-
-      {/* Hiasan */}
-      <img src="/cupcake.png" className="deco cupcake" alt="" />
-      <img src="/cake-slice.png" className="deco cake" alt="" />
     </section>
   );
 };
