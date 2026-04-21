@@ -1,17 +1,35 @@
-import { data } from '../../data/Data';
-import "./Workflow.css";
+import React from 'react';
+import { featuresData } from '../../data/Data';
+import './Workflow.css';
 
-function Workflow() {
+const Workflow = () => {
+  return (
+    <div className="workflow-container">
+      <h2 className="workflow-title">Workflow</h2>
+      <div className="workflow-grid">
+        {featuresData.map((item) => (
+          /* Bagian ini sudah diupdate dengan class unik card-${item.id} */
+          <div key={item.id} className={`feature-card card-${item.id}`}>
+            <div className="image-group">
+              {item.images.map((imgSrc, index) => {
+                const fileName = imgSrc.split('/').pop().split('.')[0];
+                return (
+                  <img 
+                    key={index} 
+                    src={imgSrc} 
+                    alt="workflow-art" 
+                    className={`workflow-img img-${fileName}`} 
+                  />
+                );
+              })}
+            </div>
+            <h3>{item.title}</h3>
+            <p>{item.description}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+};
 
-    // siapin logic-logic JS disini
-
-    return (
-        <section>
-
-            {/* isi semua kode disini dan di file CSS buat urusan DESIGN */}
-            {/* dan di data/Data.js untuk urusan DATA */}
-            
-        </section>
-    )
-}
 export default Workflow;

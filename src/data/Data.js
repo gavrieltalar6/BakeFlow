@@ -39,3 +39,33 @@ export const pricing = [
     features: ["Fitur A", "Fitur B", "Fitur C"]
   }
 ];
+
+import cake1 from '../assets/images/cake1.png';
+import cake2 from '../assets/images/cake2.png';
+import catDekatPapan from '../assets/images/catdekatpapan.png';
+import catTengah from '../assets/images/cattengah.png';
+import papanTulis from '../assets/images/papantulis.png';
+import stikerRight from '../assets/images/stikerright.png';
+import threeCat from '../assets/images/threecat.png';
+import windowImg from '../assets/images/window.png';
+
+export const featuresData = [
+  {
+    id: 1,
+    title: "INPUT YOUR PRODUCTS & INGREDIENTS",
+    description: "Input your products, finished goods, and ingredients for tracking.",
+    images: [cake1, papanTulis, catDekatPapan] 
+  },
+  {
+    id: 2,
+    title: "COMPATIBLE WITH AUTOMATED RETAILING",
+    description: "Track your vending machines/other automated sales",
+    images: [threeCat, windowImg]
+  },
+  {
+    id: 3,
+    title: "AUTOMATIC STOCK MANAGEMENT",
+    description: "Real-time automatic inventory tracking as orders come in",
+    images: [catTengah, cake2, stikerRight]
+  }
+];

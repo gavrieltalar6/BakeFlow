@@ -14,7 +14,7 @@ function Features() {
   };
 
   return (
-    <section className="features-section">
+    <section className="features-section" id="features">
       <div className="features-header">
         <h2>TRACK STOCK IN REAL TIME</h2>
         <p>Know what you have before you run out. Track ingredients, finished goods, and expiration dates. The system alerts you when supplies get low.</p>
