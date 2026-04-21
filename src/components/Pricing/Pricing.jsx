@@ -1,12 +1,12 @@
 import React from 'react';
 import './Pricing.css';
 
-// Import gambar dengan relative path yang benar
+
 import standardImg from '../../assets/images/cat-with-box.png';
 import mediumImg from '../../assets/images/cat-with-cupcake.png';
 import fullImg from '../../assets/images/cat-with-computer.png';
 
-// Komponen Card yang menangani tampilan tiap paket
+
 const PricingCard = ({ title, price, image, features }) => {
   return (
     <div className="pricing-card">

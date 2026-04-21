@@ -11,16 +11,13 @@
   background-color: #f2a6c2; 
   position: relative;     
   padding: 50px 0;
-  overflow: hidden; /* Mencegah hiasan background bikin scrollbar muncul */
+  overflow: hidden;
 }
-
-/* 2. Dekorasi Background (Kue & Cupcake) */
-/* Ukuran dasar untuk semua dekorasi */
 .deco-item {
   position: absolute;
   z-index: 0;
   pointer-events: none;
-  width: 150px; /* <--- Ganti angka ini untuk memperbesar SEMUA gambar */
+  width: 150px;
   filter: drop-shadow(0 5px 15px rgba(0,0,0,0.1));
   animation: floating 4s ease-in-out infinite;
 } 
@@ -50,14 +47,13 @@
   width: 190px;
   transform: rotate(-20deg);
 }
-/* Styling untuk semua hiasan mini */
+
 .deco-mini {
-  width: 50px; /* Ukuran mini */
-  opacity: 0.8; /* Sedikit lebih transparan agar fokus ke yang besar */
-  animation-duration: 3s; /* Gerakan lebih cepat sedikit */
+  width: 50px; 
+  opacity: 0.8;
+  animation-duration: 3s; 
 }
 
-/* Posisi spesifik untuk yang mini agar zig-zag dan mengisi ruang kosong */
 .mini-1 {
   top: 10%;
   right: 30%;
@@ -77,10 +73,10 @@
   transform: rotate(15deg);
 }
 
-/* Media Query agar di HP tidak terlalu berantakan */
+
 @media (max-width: 768px) {
   .deco-mini {
-    display: none; /* Sembunyikan yang mini di layar kecil agar tidak menutupi form */
+    display: none;
   }
 }
 
@@ -190,11 +186,11 @@
 }
 
 .contact-form textarea {
-  resize: vertical;          /* Hanya tarik ke bawah */
+  resize: vertical;    
   min-height: 80px;
-  max-height: 180px;         /* Biar gak terlalu panjang keluar kertas */
-  overflow-wrap: break-word; /* Teks pecah ke baris baru */
-  word-break: break-all;     /* Paksa pecah teks tanpa spasi */
+  max-height: 180px;        
+  overflow-wrap: break-word; 
+  word-break: break-all;    
 }
 
 .contact-form button {
