@@ -1,3 +1,14 @@
+import cake1 from '../assets/images/cake1.png';
+import cake2 from '../assets/images/cake2.png';
+import catDekatPapan from '../assets/images/catdekatpapan.png';
+import catTengah from '../assets/images/cattengah.png';
+import papanTulis from '../assets/images/papantulis.png';
+import stikerRight from '../assets/images/stikerright.png';
+import threeCat from '../assets/images/threecat.png';
+import windowImg from '../assets/images/window.png';
+import catMascot from "../assets/images/cat.midfitures.png";
+import catArticle2 from "../assets/images/cat.rightfitures.png";
+
 export const data = [
   { 
     id: 1, 
@@ -40,15 +51,6 @@ export const pricing = [
   }
 ];
 
-import cake1 from '../assets/images/cake1.png';
-import cake2 from '../assets/images/cake2.png';
-import catDekatPapan from '../assets/images/catdekatpapan.png';
-import catTengah from '../assets/images/cattengah.png';
-import papanTulis from '../assets/images/papantulis.png';
-import stikerRight from '../assets/images/stikerright.png';
-import threeCat from '../assets/images/threecat.png';
-import windowImg from '../assets/images/window.png';
-
 export const featuresData = [
   {
     id: 1,
@@ -69,3 +71,32 @@ export const featuresData = [
     images: [catTengah, cake2, stikerRight]
   }
 ];
+
+export const ARTICLES = [
+  {
+    id: 1,
+    title: "Measuring of Baker Whiskers",
+    description:
+      "Temukan bagaimana Sales Dashboard BakeFlow membantu Anda mengidentifikasi produk terlaris, merencanakan stok bahan, dan menyesuaikan menu agar tepat sasaran sesuai permintaan pasar.",
+    image: catDekatPapan,
+    sticker: cake1,
+  },
+  {
+    id: 2,
+    title: "Predicting the Big Trends",
+    description:
+      "Pelajari cara BakeFlow menganalisis data penjualan harian untuk memprediksi tren pasar, sehingga Anda selalu selangkah lebih maju dalam mempersiapkan produk unggulan.",
+    image: catArticle2,
+    sticker: cake2,
+  },
+  {
+    id: 3,
+    title: "Scaling Your Bakery Business",
+    description:
+      "Dari satu toko hingga banyak cabang — BakeFlow hadir untuk membantu Anda mengelola operasional secara efisien, memantau performa tiap outlet, dan mengambil keputusan berbasis data.",
+    image: catArticle2,
+    sticker: cake1,
+  },
+];
+
+export const MASCOT = catMascot;
