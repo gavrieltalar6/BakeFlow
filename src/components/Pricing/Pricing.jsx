@@ -1,16 +1,18 @@
 import React from 'react';
 import './Pricing.css';
 
+// Import gambar dengan relative path yang benar
+import standardImg from '../../assets/images/cat-with-box.png';
+import mediumImg from '../../assets/images/cat-with-cupcake.png';
+import fullImg from '../../assets/images/cat-with-computer.png';
 
-
-
+// Komponen Card yang menangani tampilan tiap paket
 const PricingCard = ({ title, price, image, features }) => {
   return (
     <div className="pricing-card">
       <h2 className="card-title">{title}</h2>
       <div className="card-content">
         <div className="card-image-container">
-          {/* Ganti src dengan path gambar aslimu */}
           <img src={image} alt={title} className="card-image" />
         </div>
         <ul className="feature-list">
@@ -35,33 +37,32 @@ const Pricing = () => {
     {
       title: 'STANDARD',
       price: '19.99',
-      image: '/cat-with-cupcake.png',
+      image: standardImg,
       features: ['fitur', 'fitur', 'fitur']
     },
     {
       title: 'MEDIUM',
       price: '29.99',
-      image: '/cat-with-box.png',
+      image: mediumImg,
       features: ['fitur', 'fitur', 'fitur', 'fitur']
     },
-
-   {
-    title: 'FULL',
-    price: '39.99',
-    image: '/cat-with-computer.png',
-    features: ['fitur', 'fitur', 'fitur', 'fitur', 'fitur']
-  }
+    {
+      title: 'FULL',
+      price: '39.99',
+      image: fullImg,
+      features: ['fitur', 'fitur', 'fitur', 'fitur', 'fitur']
+    }
   ];
 
   return (
-    <div className="pricing-container">
+    <section className="pricing-container">
       <h1 className="main-title">SIMPLE<br />PRICING</h1>
       <div className="cards-wrapper">
         {tiers.map((tier, index) => (
           <PricingCard key={index} {...tier} />
         ))}
       </div>
-    </div>
+    </section>
   );
 };
 
