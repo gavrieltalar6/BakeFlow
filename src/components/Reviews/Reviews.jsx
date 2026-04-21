@@ -1,4 +1,4 @@
-import { data } from '../../data/Data';
+import React from 'react';
 import "./Reviews.css";
 
 function Reviews() {
