@@ -48,6 +48,8 @@ import papanTulis from '../assets/images/papantulis.png';
 import stikerRight from '../assets/images/stikerright.png';
 import threeCat from '../assets/images/threecat.png';
 import windowImg from '../assets/images/window.png';
+import catLeft from '../assets/images/cat-leftfitures.png';
+import catMid from '../assets/images/cat-leftfitures.png';
 
 export const featuresData = [
   {
@@ -69,3 +71,27 @@ export const featuresData = [
     images: [catTengah, cake2, stikerRight]
   }
 ];
+
+export const reviewsData = [
+  {
+    id: 1,
+    name: "James",
+    role: "Owner Santo's Bakery",
+    text: "This system cut my inventory time by three hours a week. I stopped guessing and started knowing.",
+    img: catLeft
+  },
+  {
+    id: 2,
+    name: "Jayson",
+    role: "Chen's Cake Studio",
+    text: "This system cut my inventory time by three hours a week. i stopped guessing and started knowing",
+    img: catDekatPapan
+  },
+  {
+    id: 3,
+    name: "Ricky",
+    role: "Rossi's Artisan Bakery",
+    text: "No more lost orders. No more surprises. Everything runs clean, and i sleep better at night",
+    img: catMid
+  }
+]
