@@ -3,15 +3,43 @@ import { Link } from 'react-router-dom';
 import colorImg from '../assets/images/color.png';
 import logoImg from '../assets/images/logo.png';
 import iconImg from '../assets/images/icon.png';
+import ButtonStyle from '../assets/images/ButtonStyle.png';
 import componentImg from '../assets/images/component.png';
-import Motion from '../assets/images/Motion.gif';
+import cupcakeTopLeftImg from '../assets/images/cat-right.png';
+import cupcakeTopRightImg from '../assets/images/cat-left.png';
+import windowImg from '../assets/images/cat-with-box.png';
+import cakeSliceImg from '../assets/images/threecat.png';
+import cupcakeBottomRightImg from '../assets/images/stiker.fitures.png';
+import boxStackImg from '../assets/images/stiker.fitures.png';
 // import namafilenya from '../assets/images/namafile.png';  ----- contoh kalo perlu import sesuatu dari asset
 
 const DesignSys = () => {
   return (
     // connector ke CSS di bawah, jangan diganggu
     <section style={styles.container}>
-      
+       <div style={{...styles.decorative, top: '100px', left: '20px'}}>
+        <img src={cupcakeTopLeftImg} alt="cupcake" style={styles.decorImg1} />
+      </div>
+
+      <div style={{...styles.decorative, top: '80px', right: '35px'}}>
+        <img src={cupcakeTopRightImg} alt="cupcake" style={styles.decorImg2} />
+      </div>
+ 
+      <div style={{...styles.decorative, left: '1150px', top: '870px'}}>
+        <img src={windowImg} alt="window" style={styles.decorImg3} />
+      </div>
+
+      <div style={{...styles.decorative, left: '350px', top: '1700px'}}>
+        <img src={cakeSliceImg} alt="cake" style={styles.decorImg5} />
+      </div>
+ 
+      <div style={{...styles.decorative, right: '25px', bottom: '0px'}}>
+        <img src={cupcakeBottomRightImg} alt="cupcake" style={styles.decorImg6} />
+      </div>
+ 
+      <div style={{...styles.decorative, left: '10px', bottom: '0px'}}>
+        <img src={boxStackImg} alt="boxes" style={styles.decorImg7} />
+      </div>
       
       <div style={styles.content}>
         <h1>BakeFlow Design System</h1>
@@ -38,28 +66,9 @@ const DesignSys = () => {
         <h2 style={styles.sectionTitle}>Component</h2>
         <img src={componentImg} alt="component" style={styles.image} />
 
-        {/* MOTION */}
-        <h2 style={styles.sectionTitle}>Motion</h2>
-        <img src={Motion} alt="Motion" style={styles.image} />
-
-        {/* PATTERNS */}
-        <h2 style={styles.sectionTitle}>Patterns</h2>
-        <p style={styles.desc}>
-          Website menggunakan layout vertikal dari atas ke bawah yang terdiri dari
-          navbar, hero section, features, pricing, hingga contact. Informasi ditampilkan
-          menggunakan card grid agar lebih rapi dan mudah dibaca. Penggunaan warna pastel,
-          bentuk rounded, serta ilustrasi yang konsisten membantu menciptakan tampilan
-          yang harmonis dan nyaman dilihat.
-        </p>
-
-        {/* THEME */}
-        <h2 style={styles.sectionTitle}>Theme</h2>
-        <p style={styles.desc}>
-          Website ini menggunakan tema sweet, playful, dan friendly yang sesuai dengan
-          konsep bakery. Warna pastel dan ilustrasi lucu digunakan untuk menciptakan
-          suasana hangat dan menarik, sehingga user merasa lebih nyaman saat menggunakan
-          website.
-        </p>
+        {/* Button Style */}
+        <h2 style={styles.sectionTitle}>Button Style</h2>
+        <img src={ButtonStyle} alt="Button" style={styles.image} />
 
         {/* TYPOGRAPHY */}
         <h2 style={styles.sectionTitle}>Typography</h2>
@@ -81,6 +90,8 @@ const styles = {
   container: {
     padding: '120px 20px 50px',
     minHeight: '100vh',
+    position: 'relative',
+    overflowX: 'hidden',
   },
 
   content: {
@@ -98,6 +109,7 @@ const styles = {
 
   title: {
     color: '#FFFFFF',
+    background:'#FF77A5'
     
   },
 
@@ -115,7 +127,61 @@ const styles = {
     maxWidth: '600px',
     lineHeight: '1.6',
     margin: '0 auto'
+  },
+  decorative: {
+    position: 'absolute',
+    zIndex: 1,
+    pointerEvents: 'none',
+  },
+ 
+  decorImg1: {
+    width: '90px',
+    height: 'auto',
+    animation: 'float 3s ease-in-out infinite',
+    opacity: 0.85,
+    filter: 'drop-shadow(0 2px 4px rgba(0,0,0,0.1))',
+  },
+ 
+  decorImg2: {
+    width: '110px',
+    height: 'auto',
+    animation: 'floatSlow 4s ease-in-out infinite 0.5s',
+    opacity: 0.9,
+    filter: 'drop-shadow(0 2px 4px rgba(0,0,0,0.1))',
+  },
+ 
+  decorImg3: {
+    width: '220px',
+    height: 'auto',
+    animation: 'sway 3s ease-in-out infinite',
+    opacity: 0.75,
+    filter: 'drop-shadow(0 2px 4px rgba(0,0,0,0.1))',
+  },
+ 
+  decorImg5: {
+    width: '1000px',
+    height: 'auto',
+    animation: 'float 3.5s ease-in-out infinite 0.3s',
+    opacity: 0.25,
+    filter: 'drop-shadow(0 1px 2px rgba(0,0,0,0.05))',
+  },
+ 
+  decorImg6: {
+    width: '160px',
+    height: 'auto',
+    animation: 'floatSlow 3.8s ease-in-out infinite 0.8s',
+    opacity: 0.8,
+    filter: 'drop-shadow(0 2px 4px rgba(0,0,0,0.1))',
+  },
+ 
+  decorImg7: {
+    width: '180px',
+    height: 'auto',
+    animation: 'sway 4s ease-in-out infinite 0.5s',
+    opacity: 0.8,
+    filter: 'drop-shadow(0 2px 4px rgba(0,0,0,0.1))',
   }
+
 };
 
 export default DesignSys;
