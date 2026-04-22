@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
 import { useNavigate, useLocation } from "react-router-dom";
+import logo from "../../assets/images/logosquare.png";
 import "./Navbar.css";
 
 const NAV_LINKS = [
@@ -78,6 +79,7 @@ function Navbar() {
   return (
     <nav className={`navbar ${scrolled ? "scrolled" : ""}`}>
       <div className="nav-logo" onClick={handleLogo}>
+        <img src={logo} alt="BakeFlow Logo" className="nav-logo-img" />
         BakeFlow
       </div>
       <ul className={`nav-links ${menuOpen ? "active" : ""}`}>

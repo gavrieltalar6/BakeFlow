@@ -5,7 +5,7 @@ import './Workflow.css';
 const Workflow = () => {
   return (
     <div className="workflow-container">
-      <h2 className="workflow-title">Workflow</h2>
+      <h2 className="workflow-title"></h2>
       <div className="workflow-grid">
         {featuresData.map((item) => (
           /* Bagian ini sudah diupdate dengan class unik card-${item.id} */

@@ -1,13 +1,16 @@
-import React from "react";
-import "./Pricing.css";
+import React from 'react';
+import './Pricing.css';
 
-const PricingCard = ({ title, price, image, features }) => {
+import standardImg from '../../assets/images/cat-with-box.png';
+import mediumImg from '../../assets/images/cat-with-cupcake.png';
+import fullImg from '../../assets/images/cat-with-computer.png';
+
+const PricingCard = ({ title, price, image, features, onGetStarted }) => {
   return (
     <div className="pricing-card">
       <h2 className="card-title">{title}</h2>
       <div className="card-content">
         <div className="card-image-container">
-          {/* Ganti src dengan path gambar aslimu */}
           <img src={image} alt={title} className="card-image" />
         </div>
         <ul className="feature-list">
@@ -21,31 +24,39 @@ const PricingCard = ({ title, price, image, features }) => {
       <div className="card-footer">
         <p className="includes-text">What's Includes :</p>
         <p className="price-text">${price}/mo</p>
-        <button className="get-started-btn">Get Started</button>
+        <button className="get-started-btn" onClick={onGetStarted}>Get Started</button>
       </div>
     </div>
   );
 };
 
 const Pricing = () => {
+  const handleGetStarted = () => {
+    const el = document.getElementById("contact");
+    if (el) {
+      const offset = 80;
+      const top = el.getBoundingClientRect().top + document.body.scrollTop - offset;
+      document.body.scrollTo({ top, behavior: "smooth" });
+    }
+  };
+
   const tiers = [
     {
       title: "STANDARD",
       price: "19.99",
-      image: "/cat-with-cupcake.png",
+      image: standardImg,
       features: ["Warehouse", "Dashboard", "Cashier"],
     },
     {
       title: "MEDIUM",
       price: "29.99",
-      image: "/cat-with-box.png",
+      image: mediumImg,
       features: ["Warehouse", "Dashboard", "Cashier", "Auto-Restock"],
     },
-
     {
       title: "FULL",
       price: "39.99",
-      image: "/cat-with-computer.png",
+      image: fullImg,
       features: [
         "Warehouse",
         "Dashboard",
@@ -66,7 +77,7 @@ const Pricing = () => {
         </h1>
         <div className="cards-wrapper">
           {tiers.map((tier, index) => (
-            <PricingCard key={index} {...tier} />
+            <PricingCard key={index} {...tier} onGetStarted={handleGetStarted} />
           ))}
         </div>
       </div>
