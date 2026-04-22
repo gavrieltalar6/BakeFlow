@@ -7,6 +7,7 @@ import ScrollToTop from './components/ScrollToTop.jsx';
 import Article1 from "./pages/Article1";
 import Article2 from "./pages/Article2";
 import Article3 from "./pages/Article3";
+import Team from "./pages/Team";
 import "./App.css";
 
 function App() {
@@ -23,6 +24,7 @@ function App() {
           <Route path="/article/1" element={<Article1 />} />
           <Route path="/article/2" element={<Article2 />} />
           <Route path="/article/3" element={<Article3 />} />
+          <Route path="/our-team" element={<Team />} />
         </Routes>
       </main>
       <Footer />
