@@ -1,7 +1,12 @@
 import { ARTICLES, MASCOT } from "../../data/data";
+import { useNavigate } from "react-router-dom";
+
 import "./Articles.css";
 
 function Articles() {
+  
+const navigate = useNavigate();
+
   return (
     <section className="articles-section">
       <div className="articles-label">
@@ -14,9 +19,16 @@ function Articles() {
       <div className="articles-scroll-wrapper">
         <div className="articles-track">
           {ARTICLES.map((article) => (
-            <div className="article-card" key={article.id}>
+            <div
+              className="article-card"
+              key={article.id}
+              onClick={() => navigate(`/article/${article.id}`)}
+              style={{ cursor: "pointer" }}
+            >
               <div className="article-card-header">
-                <h3><b>{article.title}</b></h3>
+                <h3>
+                  <b>{article.title}</b>
+                </h3>
                 <img
                   src={article.sticker}
                   alt="sticker"

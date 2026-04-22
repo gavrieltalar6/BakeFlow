@@ -1,13 +1,11 @@
 import React from 'react';
 import './Pricing.css';
 
-
 import standardImg from '../../assets/images/cat-with-box.png';
 import mediumImg from '../../assets/images/cat-with-cupcake.png';
 import fullImg from '../../assets/images/cat-with-computer.png';
 
-
-const PricingCard = ({ title, price, image, features }) => {
+const PricingCard = ({ title, price, image, features, onGetStarted }) => {
   return (
     <div className="pricing-card">
       <h2 className="card-title">{title}</h2>
@@ -26,13 +24,22 @@ const PricingCard = ({ title, price, image, features }) => {
       <div className="card-footer">
         <p className="includes-text">What's Includes :</p>
         <p className="price-text">${price}/mo</p>
-        <button className="get-started-btn">Get Started</button>
+        <button className="get-started-btn" onClick={onGetStarted}>Get Started</button>
       </div>
     </div>
   );
 };
 
 const Pricing = () => {
+  const handleGetStarted = () => {
+    const el = document.getElementById("contact");
+    if (el) {
+      const offset = 80;
+      const top = el.getBoundingClientRect().top + document.body.scrollTop - offset;
+      document.body.scrollTo({ top, behavior: "smooth" });
+    }
+  };
+
   const tiers = [
     {
       title: "STANDARD",
@@ -46,7 +53,6 @@ const Pricing = () => {
       image: mediumImg,
       features: ["Warehouse", "Dashboard", "Cashier", "Auto-Restock"],
     },
-
     {
       title: "FULL",
       price: "39.99",
@@ -71,7 +77,7 @@ const Pricing = () => {
         </h1>
         <div className="cards-wrapper">
           {tiers.map((tier, index) => (
-            <PricingCard key={index} {...tier} />
+            <PricingCard key={index} {...tier} onGetStarted={handleGetStarted} />
           ))}
         </div>
       </div>

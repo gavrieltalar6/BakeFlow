@@ -4,6 +4,9 @@ import Footer from "./components/Footer/Footer";
 import Home from "./pages/Home";
 import DesignSys from "./pages/DesignSys.jsx";
 import ScrollToTop from './components/ScrollToTop.jsx';
+import Article1 from "./pages/Article1";
+import Article2 from "./pages/Article2";
+import Article3 from "./pages/Article3";
 import "./App.css";
 
 function App() {
@@ -17,6 +20,9 @@ function App() {
           
           {/* Jalur ke halaman baru kamu */}
           <Route path="/design-system" element={<DesignSys />} />
+          <Route path="/article/1" element={<Article1 />} />
+          <Route path="/article/2" element={<Article2 />} />
+          <Route path="/article/3" element={<Article3 />} />
         </Routes>
       </main>
       <Footer />
