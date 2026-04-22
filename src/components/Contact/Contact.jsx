@@ -20,8 +20,8 @@ const Contact = () => {
       <img src={mangosteenImg} className="deco-item fruit-small" alt="Decoration" />
       <img src={cakeImg} className="deco-item cake-bottom-right" alt="Cake Decoration" />
       <img src={mangosteenImg} className="deco-item deco-mini mini-1" alt="" />
-<img src={cupcakeImg} className="deco-item deco-mini mini-2" alt="" />
-<img src={mangosteenImg} className="deco-item deco-mini mini-3" alt="" />
+      <img src={cupcakeImg} className="deco-item deco-mini mini-2" alt="" />
+      <img src={mangosteenImg} className="deco-item deco-mini mini-3" alt="" />
 
      
       <div 
