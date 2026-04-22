@@ -11,36 +11,37 @@ import windowImg from '../assets/images/cat-with-box.png';
 import cakeSliceImg from '../assets/images/threecat.png';
 import cupcakeBottomRightImg from '../assets/images/stiker.fitures.png';
 import boxStackImg from '../assets/images/stiker.fitures.png';
-// import namafilenya from '../assets/images/namafile.png';  ----- contoh kalo perlu import sesuatu dari asset
 
 const DesignSys = () => {
   return (
-    // connector ke CSS di bawah, jangan diganggu
     <section style={styles.container}>
-       <div style={{...styles.decorative, top: '100px', left: '20px'}}>
+      {/* DEKORASI DEPAN */}
+      <div style={{ ...styles.decorative, top: '100px', left: '20px' }}>
         <img src={cupcakeTopLeftImg} alt="cupcake" style={styles.decorImg1} />
       </div>
 
-      <div style={{...styles.decorative, top: '80px', right: '35px'}}>
+      <div style={{ ...styles.decorative, top: '80px', right: '35px' }}>
         <img src={cupcakeTopRightImg} alt="cupcake" style={styles.decorImg2} />
       </div>
- 
-      <div style={{...styles.decorative, left: '1150px', top: '870px'}}>
+
+      <div style={{ ...styles.decorative, left: '1150px', top: '870px' }}>
         <img src={windowImg} alt="window" style={styles.decorImg3} />
       </div>
 
-      <div style={{...styles.decorative, left: '350px', top: '1700px'}}>
+      {/* DEKORASI BELAKANG (decorImg5) */}
+      <div style={{ ...styles.decorativeBehind, left: '350px', top: '1700px' }}>
         <img src={cakeSliceImg} alt="cake" style={styles.decorImg5} />
       </div>
- 
-      <div style={{...styles.decorative, right: '25px', bottom: '0px'}}>
+
+      <div style={{ ...styles.decorative, right: '25px', bottom: '0px' }}>
         <img src={cupcakeBottomRightImg} alt="cupcake" style={styles.decorImg6} />
       </div>
- 
-      <div style={{...styles.decorative, left: '10px', bottom: '0px'}}>
+
+      <div style={{ ...styles.decorative, left: '10px', bottom: '0px' }}>
         <img src={boxStackImg} alt="boxes" style={styles.decorImg7} />
       </div>
-      
+
+      {/* KONTEN UTAMA */}
       <div style={styles.content}>
         <h1>BakeFlow Design System</h1>
         <hr />
@@ -82,35 +83,28 @@ const DesignSys = () => {
   );
 };
 
-
-
-
-// isi CSSnya disini. Dibawah ini ada contoh. Nanti hapus semua aja kalo udah mau lu isi
-const styles = { 
+const styles = {
   container: {
     padding: '120px 20px 50px',
     minHeight: '100vh',
     position: 'relative',
     overflowX: 'hidden',
+    backgroundColor: '#FFFFFF', // Menambahkan bg agar z-index minus tidak hilang
   },
 
   content: {
     width: '100%',
     maxWidth: '900px',
-    margin: '0 auto'
+    margin: '0 auto',
+    position: 'relative',
+    zIndex: 2, // Pastikan konten di depan dekorasi
   },
 
   sectionTitle: {
-  maxWidth: '600px',
-  margin: '40px auto 10px',
-  textAlign: 'left',
-  color: '#FF77A5'
-  },
-
-  title: {
-    color: '#FFFFFF',
-    background:'#FF77A5'
-    
+    maxWidth: '600px',
+    margin: '40px auto 10px',
+    textAlign: 'left',
+    color: '#FF77A5',
   },
 
   image: {
@@ -120,20 +114,28 @@ const styles = {
     marginBottom: '20px',
     display: 'block',
     marginLeft: 'auto',
-    marginRight: 'auto'
+    marginRight: 'auto',
   },
 
   desc: {
     maxWidth: '600px',
     lineHeight: '1.6',
-    margin: '0 auto'
+    margin: '0 auto',
   },
+
   decorative: {
     position: 'absolute',
     zIndex: 1,
     pointerEvents: 'none',
   },
- 
+
+  // Style khusus untuk dekorasi yang ingin ditaruh di belakang konten
+  decorativeBehind: {
+    position: 'absolute',
+    zIndex: 0, // Di bawah content (2) tapi di atas background container
+    pointerEvents: 'none',
+  },
+
   decorImg1: {
     width: '90px',
     height: 'auto',
@@ -141,7 +143,7 @@ const styles = {
     opacity: 0.85,
     filter: 'drop-shadow(0 2px 4px rgba(0,0,0,0.1))',
   },
- 
+
   decorImg2: {
     width: '110px',
     height: 'auto',
@@ -149,7 +151,7 @@ const styles = {
     opacity: 0.9,
     filter: 'drop-shadow(0 2px 4px rgba(0,0,0,0.1))',
   },
- 
+
   decorImg3: {
     width: '220px',
     height: 'auto',
@@ -157,15 +159,15 @@ const styles = {
     opacity: 0.75,
     filter: 'drop-shadow(0 2px 4px rgba(0,0,0,0.1))',
   },
- 
+
   decorImg5: {
     width: '1000px',
     height: 'auto',
     animation: 'float 3.5s ease-in-out infinite 0.3s',
-    opacity: 0.25,
+    opacity: 0.15, // Saya turunkan sedikit lagi agar teks lebih terbaca
     filter: 'drop-shadow(0 1px 2px rgba(0,0,0,0.05))',
   },
- 
+
   decorImg6: {
     width: '160px',
     height: 'auto',
@@ -173,15 +175,14 @@ const styles = {
     opacity: 0.8,
     filter: 'drop-shadow(0 2px 4px rgba(0,0,0,0.1))',
   },
- 
+
   decorImg7: {
     width: '180px',
     height: 'auto',
     animation: 'sway 4s ease-in-out infinite 0.5s',
     opacity: 0.8,
     filter: 'drop-shadow(0 2px 4px rgba(0,0,0,0.1))',
-  }
-
+  },
 };
 
 export default DesignSys;

@@ -14,7 +14,7 @@ function Footer() {
           <span className="logo-bake">Bake</span>
           <span className="logo-flow">Flow</span>
         </h3>
-        <p className="tagline">Sistem Manajemen Toko Kue</p>
+        <p className="tagline">Cake Shop Management System</p>
       </div>
 
       {/* Center Section */}
@@ -22,9 +22,10 @@ function Footer() {
         <h3>Menu</h3>
         <ul>
           <li><a href="/">Home</a></li>
-          <li><a href="/produk">Produk</a></li>
-          <li><a href="/tentang">Tentang</a></li>
-          <li><a href="/kontak">Kontak</a></li>
+          <li><a href="/">Features</a></li>
+          <li><a href="/">Pricing</a></li>
+          <li><a href="/">Articles</a></li>
+          <li><a href="/">Contact</a></li>
           <li><a href="/design-system">Design System</a></li>
         </ul>
       </div>
