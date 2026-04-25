@@ -7,36 +7,42 @@ const OurTeam = () => {
       name: "Alvaro",
       role: "Frontend Dev",
       desc: "Menyusun tampilan antarmuka yang renyah dan responsif untuk pengguna.",
+      git: "alvarorahardjo-axr"
     },
     {
       id: 2,
       name: "Gavriel",
       role: "Project Leader",
       desc: "Dirigen utama yang memastikan seluruh resep proyek matang tepat waktu.",
+      git: "gavrieltalar6"
     },
     {
       id: 3,
       name: "Gilbert",
       role: "UI/UX Designer",
       desc: "Meracik pengalaman visual yang manis, bulat, dan nyaman di mata.",
+      git: "gibekss23-sketch"
     },
     {
       id: 4,
       name: "Gyan",
       role: "Frontend Dev",
       desc: "Mengolah kode visual menjadi elemen interaktif yang selembut adonan roti.",
+      git: "Ryllex23"
     },
     {
       id: 5,
       name: "Jason",
       role: "UI/UX Designer",
       desc: "Arsitek estetika yang memastikan setiap sudut desain tampil pulen dan cantik.",
+      git: "Jsnnfbb"
     },
     {
       id: 6,
       name: "Willy",
       role: "Quality Assurance",
       desc: "Pencicip kualitas yang memastikan sistem bebas bug dan matang sempurna.",
+      git: "WilllTzy"
     },
   ];
 
@@ -60,6 +66,7 @@ const OurTeam = () => {
               <h2 style={styles.memberName}>{member.name}</h2>
               <span style={styles.roleTag}>{member.role}</span>
               <p style={styles.memberDesc}>{member.desc}</p>
+              <p style={styles.memberGit}>@{member.git}</p>
             </div>
           ))}
         </div>
@@ -150,6 +157,12 @@ const styles = {
     color: "#555",
     lineHeight: "1.6",
     margin: 0,
+  },
+  memberGit: {
+    fontSize: "15px",
+    color: "#FF77A5",
+    lineHeight: "1.6",
+    margin: "10px",
   },
   // Efek Dekorasi Lingkaran
   decorativeCircle1: {

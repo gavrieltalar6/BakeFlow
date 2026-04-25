@@ -22,7 +22,12 @@
   align-items: center;
   justify-content: space-between;
   text-align: center;
-  background: linear-gradient(to bottom, var(--accent-pink) 0%, #f4c9d6 40%, #ffffff 100%);
+  background: linear-gradient(
+    to bottom,
+    var(--accent-pink) 0%,
+    #f4c9d6 40%,
+    #ffffff 100%
+  );
 
   overflow: hidden;
 }
@@ -59,15 +64,20 @@
   color: var(--accent-pink);
   font-family: var(--font-logo-heading);
   font-weight: 600;
+  min-height: 1em;
+  display: inline-block;
 }
 
 .hero-content p {
+  margin-top: 12vh;
+  display: flex;
+  align-items: baseline;
   font-size: 18px;
   color: var(--text-dark);
-  margin-bottom: 50px;
 }
 
 .hero-btn {
+  margin-top: 8vh;
   padding: 12px 30px;
   border-radius: 30px;
   border: none;
@@ -90,18 +100,29 @@
   margin-top: 80px;
   z-index: 2;
 }
-
 .feature-item {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 15px;
   color: var(--text-dark);
-  transition: color 0.3s ease;
+  /* hapus transition di sini */
 }
 
 .feature-item:hover {
   color: var(--accent-pink);
+}
+
+.feature-hidden {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.5s ease, transform 0.5s ease, color 0.3s ease;
+}
+
+.feature-visible {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 0.5s ease, transform 0.5s ease, color 0.3s ease;
 }
 
 .feature-item svg {
@@ -120,6 +141,30 @@
 .feature-item p {
   font-size: 14px;
   max-width: 120px;
+}
+.sparkle {
+  position: absolute;
+  pointer-events: none;
+  z-index: 0;
+  background: white;
+  border-radius: 50%;
+  opacity: 0;
+  animation: sparkle-anim infinite ease-in-out;
+}
+
+@keyframes sparkle-anim {
+  0% {
+    opacity: 0;
+    transform: scale(0) rotate(0deg);
+  }
+  50% {
+    opacity: 0.8;
+    transform: scale(1) rotate(180deg);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(0) rotate(360deg);
+  }
 }
 
 @media (max-width: 768px) {
@@ -150,11 +195,11 @@
     grid-template-columns: repeat(2, 1fr);
     gap: 30px;
     width: 100%;
-    max-width: 300px; 
+    max-width: 300px;
     margin: 60px auto 0;
   }
   .feature-item svg {
     font-size: 40px;
-    padding: 8px
+    padding: 8px;
   }
 }
