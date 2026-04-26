@@ -4,7 +4,12 @@ import { Link } from 'react-router-dom';
 
 function Footer() {
 
-    // siapin logic-logic JS disini
+  const navigate = (id) => {
+    const el = document.getElementById(id);
+    if (el) {
+      el.scrollIntoView({ behavior: "smooth" });
+    }
+  };
     
     return (
       <footer className="footer">
@@ -14,7 +19,6 @@ function Footer() {
           <span className="logo-bake">Bake</span>
           <span className="logo-flow">Flow</span>
         </h3>
-        <p className="tagline">Cake Shop Management System</p>
       </div>
 
       {/* Center Section */}
@@ -22,10 +26,10 @@ function Footer() {
         <h3>Menu</h3>
         <ul>
           <li><a href="/">Home</a></li>
-          <li><a href="/">Features</a></li>
-          <li><a href="/">Pricing</a></li>
-          <li><a href="/">Articles</a></li>
-          <li><a href="/">Contact</a></li>
+          <li><a href="/features">Features</a></li>
+          <li><a href="/pricing">Pricing</a></li>
+          <li><a href="/articles">Articles</a></li>
+          <li><a href="/contact">Contact</a></li>
           <li><a href="/design-system">Design System</a></li>
           <li><a href="/our-team">Our Team</a></li>
         </ul>
