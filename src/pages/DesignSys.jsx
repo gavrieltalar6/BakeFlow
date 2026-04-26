@@ -125,7 +125,7 @@ const styles = {
     minHeight: '100vh',
     position: 'relative',
     overflowX: 'hidden',
-    backgroundColor: '#FFFFFF', // Menambahkan bg agar z-index minus tidak hilang
+    backgroundColor: '#FFFFFF',
   },
 
   content: {
@@ -133,7 +133,7 @@ const styles = {
     maxWidth: '900px',
     margin: '0 auto',
     position: 'relative',
-    zIndex: 2, // Pastikan konten di depan dekorasi
+    zIndex: 2, 
   },
 
   sectionTitle: {
@@ -165,10 +165,10 @@ const styles = {
     pointerEvents: 'none',
   },
 
-  // Style khusus untuk dekorasi yang ingin ditaruh di belakang konten
+
   decorativeBehind: {
     position: 'absolute',
-    zIndex: 0, // Di bawah content (2) tapi di atas background container
+    zIndex: 0, 
     pointerEvents: 'none',
   },
 
@@ -200,7 +200,7 @@ const styles = {
     width: '1000px',
     height: 'auto',
     animation: 'float 3.5s ease-in-out infinite 0.3s',
-    opacity: 0.15, // Saya turunkan sedikit lagi agar teks lebih terbaca
+    opacity: 0.15, 
     filter: 'drop-shadow(0 1px 2px rgba(0,0,0,0.05))',
   },
 

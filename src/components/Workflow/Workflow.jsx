@@ -8,7 +8,6 @@ const Workflow = () => {
       <h2 className="workflow-title"></h2>
       <div className="workflow-grid">
         {featuresData.map((item) => (
-          /* Bagian ini sudah diupdate dengan class unik card-${item.id} */
           <div key={item.id} className={`feature-card card-${item.id}`}>
             <div className="image-group">
               {item.images.map((imgSrc, index) => {

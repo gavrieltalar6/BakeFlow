@@ -14,26 +14,17 @@ import charFront from "../../assets/images/cat-front.png";
 
 import charRight from "../../assets/images/cat-right.png";
 
-
-
 function Character() {
-
   const [offsetX, setOffsetX] = useState(0);
 
   const [direction, setDirection] = useState("center");
 
-
-
   useEffect(() => {
-
     let lastX = window.innerWidth / 2;
 
     let timeout;
 
-
-
     const handleMouseMove = (e) => {
-
       const currentX = e.clientX;
       const deltaPixel = currentX - lastX;
 
@@ -50,17 +41,13 @@ function Character() {
 
         if (next < -limit) next = -limit;
         return next;
-
       });
-
-
 
       lastX = currentX;
       clearTimeout(timeout);
       timeout = setTimeout(() => setDirection("center"), 120);
     };
 
-    // --- scroll (mobile) ---
     let lastScrollY = window.scrollY;
 
     const handleScroll = () => {
@@ -77,8 +64,6 @@ function Character() {
       timeout = setTimeout(() => setDirection("center"), 120);
     };
 
-
-
     window.addEventListener("mousemove", handleMouseMove);
     window.addEventListener("scroll", handleScroll);
 
@@ -88,54 +73,35 @@ function Character() {
     };
   }, []);
 
-
-
   const getCharacter = () => {
-
     if (direction === "left") return charLeft;
 
     if (direction === "right") return charRight;
 
     return charFront;
-
   };
 
-
-
   return (
-
     <section className="interactive">
-
       {/* background */}
 
       <img src={bg} className="layer bg" />
-
-
 
       {/* foreground */}
 
       <img src={front} className="layer front" />
 
-
-
       {/* character */}
 
       <img
-
         src={getCharacter()}
-
         className="character"
-
         style={{
           transform: `translateX(calc(-50% + ${offsetX}%))`,
         }}
-
       />
-
     </section>
-
   );
-
 }
 
 export default Character;

@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Delius+Swash+Caps&family=Delius+Unicase:wght@400;700&display=swap');
 :root {
-  /* Warna Tema */
   --accent-pink: #ff77a5;      /* Pink Utama */
   --accent-light: #ffd5e3;     /* Pink Muda untuk background */
   --text-dark: #333333;        /* Warna tulisan utama */

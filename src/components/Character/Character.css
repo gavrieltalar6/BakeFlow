@@ -5,7 +5,6 @@
   overflow: hidden;
 }
 
-/* semua layer */
 .layer {
   position: absolute;
   width: 100%;
@@ -13,13 +12,11 @@
   top: 0;
 }
 
-/* background */
 .bg {
   top: 0;
   z-index: 1;
 }
 
-/* foreground */
 .front {
   top: auto;
   bottom: 0;
@@ -27,7 +24,6 @@
   transform: translateY(27%);
 }
 
-/* character */
 .character {
   position: absolute;
   bottom: 10%;

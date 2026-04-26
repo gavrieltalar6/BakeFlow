@@ -1,25 +1,11 @@
-:root {
-  --accent-pink: #ff77a5;
-  --accent-light: #ffd5e3;
-  --text-dark: #333333;
-  --text-light: #666666;
-  --bg-white: #ffffff;
-  --font-logo-heading: 'Delius Unicase', cursive;
-  --font-body: 'Delius Swash Caps', cursive;
-  font-family: var(--font-body);
-  color: var(--text-dark);
-  background-color: var(--accent-light);
-}
 
-/* Footer.css */
 .footer {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  background: var(--accent-light); /* soft pink background */
+  background: var(--accent-light);
   padding: 30px;
   color: var(--text-dark);
-  font-family: Arial, sans-serif;
 }
 
 .footer-left, .footer-center, .footer-right {
@@ -29,18 +15,19 @@
 }
 
 .logo {
-  font-size: 48px;
+  font-size: 52px;
   font-weight: bold;
-  font-family: var(--font-logo-heading), sans-serif;
   text-align: center;
 }
 
 .logo-bake {
-  color: var(--text-light); /* grey tone */
+  font-family: var(--font-logo-heading) !important;
+  color: var(--text-light);
 }
 
 .logo-flow {
-  color: var(--accent-pink); /* pink accent */
+  font-family: var(--font-logo-heading) !important;
+  color: var(--accent-pink);
 }
 
 .tagline {
@@ -54,13 +41,16 @@
   color: var(--accent-pink);
 }
 
-.footer-center ul {
+.footer-center ul li {
   list-style: none;
-  padding: 0;
+  margin: 6px 0;
+  cursor: pointer !important;
+  transition: color 0.2s ease;
+  user-select: none;
 }
 
-.footer-center ul li {
-  margin: 6px 0;
+.footer-center ul li:hover {
+  color: var(--accent-pink) !important;
 }
 
 .footer-center ul li a {

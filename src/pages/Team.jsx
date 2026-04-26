@@ -48,7 +48,6 @@ const OurTeam = () => {
 
   return (
     <section style={styles.container}>
-      {/* Dekorasi Latar Belakang (Soft & Round) */}
       <div style={styles.decorativeCircle1}></div>
       <div style={styles.decorativeCircle2}></div>
       <div style={styles.decorativeCircle3}></div>
@@ -66,7 +65,7 @@ const OurTeam = () => {
               <h2 style={styles.memberName}>{member.name}</h2>
               <span style={styles.roleTag}>{member.role}</span>
               <p style={styles.memberDesc}>{member.desc}</p>
-              <p style={styles.memberGit}>@{member.git}</p>
+              <p style={styles.memberGit}>Github @{member.git}</p>
             </div>
           ))}
         </div>
@@ -86,7 +85,7 @@ const styles = {
   },
   content: {
     width: "100%",
-    maxWidth: "1200px", // Sedikit diperlebar untuk 6 orang
+    maxWidth: "1200px",
     margin: "0 auto",
     position: "relative",
     zIndex: 2,
@@ -105,7 +104,7 @@ const styles = {
   },
   grid: {
     display: "grid",
-    gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))", // Otomatis menyesuaikan 3 atau 2 kolom
+    gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))", 
     gap: "40px 30px",
     justifyItems: "center",
   },
@@ -164,7 +163,6 @@ const styles = {
     lineHeight: "1.6",
     margin: "10px",
   },
-  // Efek Dekorasi Lingkaran
   decorativeCircle1: {
     position: "absolute",
     top: "-80px",

@@ -8,7 +8,7 @@ function Articles() {
 const navigate = useNavigate();
 
   return (
-    <section className="articles-section">
+    <section className="articles-section" id="article">
       <div className="articles-label">
         <h2>Articles</h2>
         <div className="articles-mascot">

@@ -5,8 +5,6 @@ import { reviewsData } from '../../data/Data';
 
 function Reviews() {
 
-    // siapin logic-logic JS disini
-
     return (
         <section className="results-container">
             <h2 className="results-title">REAL RESULTS</h2>
