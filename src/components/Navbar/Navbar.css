@@ -23,21 +23,21 @@
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-.navbar.show {
-  transform: translateY(0);
-}
-
-.navbar.hide {
-  transform: translateY(-120%);
-  opacity: 0;
-  pointer-events: none;
-}
-
 .nav-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
   font-size: 24px;
   font-weight: bold;
   cursor: pointer;
   margin-right: 40px;
+}
+
+.nav-logo-img {
+  width: 36px;
+  height: 36px;
+  object-fit: contain;
+  border-radius: 8px;
 }
 
 .nav-links {

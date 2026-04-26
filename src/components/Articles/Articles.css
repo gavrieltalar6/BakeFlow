@@ -1,0 +1,190 @@
+.articles-section {
+  position: relative;
+  display: flex;
+  align-items: stretch;
+  width: 100%;
+  min-height: 400px;
+  overflow: hidden;
+  background-color: var(--bg-white);
+  padding: 80px 0;
+  padding-left: 10vw;
+}
+
+/* Label kiri sticky */
+.articles-label {
+  position: sticky;
+  left: 0;
+  z-index: 10;
+  min-width: 220px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+  background-color: var(--bg-white);
+  padding: 0 24px;
+}
+
+.articles-label h2 {
+  font-size: 48px;
+  color: var(--accent-pink);
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+.articles-mascot {
+  background: var(--accent-light);
+  padding: 16px;
+  border-radius: 16px;
+}
+
+.articles-mascot img {
+  width: 150px;
+  height: 150px;
+  object-fit: contain;
+}
+
+/* Scroll wrapper */
+.articles-scroll-wrapper {
+  flex: 1;
+  overflow-x: auto;
+  overflow-y: visible;
+  padding: 30px 40px 20px;
+  scrollbar-width: thin;
+  scrollbar-color: var(--accent-pink) var(--accent-light);
+}
+
+.articles-scroll-wrapper::-webkit-scrollbar {
+  height: 6px;
+}
+
+.articles-scroll-wrapper::-webkit-scrollbar-track {
+  background: var(--accent-light);
+  border-radius: 10px;
+}
+
+.articles-scroll-wrapper::-webkit-scrollbar-thumb {
+  background: var(--accent-pink);
+  border-radius: 10px;
+}
+
+/* Track kartu */
+.articles-track {
+  display: flex;
+  gap: 24px;
+  width: max-content;
+  padding: 10px 0;
+  height: 100%;
+}
+
+/* Kartu artikel */
+.article-card {
+  width: 420px;
+  background: var(--accent-light);
+  border-radius: 20px;
+  overflow: visible;
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+  border: 2px solid var(--accent-pink);
+}
+
+.article-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 30px rgba(255, 119, 165, 0.2);
+}
+
+/* Header card */
+.article-card-header {
+  position: relative;
+  padding: 20px 24px;
+  margin-left: 8px;
+}
+
+.article-sticker {
+  position: absolute;
+  top: -30px;
+  right: -10px;
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+  filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.1));
+  transform: rotate(10deg);
+  z-index: 2;
+}
+
+.article-icon-wrapper {
+  background: white;
+  padding: 10px;
+  border-radius: 12px;
+  flex-shrink: 0;
+}
+
+.article-icon-wrapper img {
+  width: 48px;
+  height: 48px;
+  object-fit: contain;
+}
+
+.article-card-header h3 {
+  font-size: 16px;
+  color: var(--text-dark);
+  line-height: 1.3;
+  text-transform: uppercase;
+}
+
+/* Body card: gambar kiri + deskripsi kanan */
+.article-card-body {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  background: white;
+  padding: 20px 24px;
+  flex: 1;
+  border-radius: 0 0 18px 18px;
+}
+
+.article-image-side {
+  flex-shrink: 0;
+}
+
+.article-image-side img {
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+}
+
+.article-card-body p {
+  font-size: 14px;
+  color: var(--text-light);
+  line-height: 1.7;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .articles-label {
+    min-width: 120px;
+    padding: 0 16px;
+  }
+
+  .articles-label h2 {
+    font-size: 28px;
+  }
+
+  .articles-mascot img {
+    width: 80px;
+    height: 80px;
+  }
+
+  .article-card {
+    width: 300px;
+  }
+
+  .article-image-side img {
+    width: 70px;
+    height: 70px;
+  }
+}

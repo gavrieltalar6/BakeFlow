@@ -1,16 +1,16 @@
 import React from 'react';
 import './Pricing.css';
 
+import standardImg from '../../assets/images/cat-with-box.png';
+import mediumImg from '../../assets/images/cat-with-cupcake.png';
+import fullImg from '../../assets/images/cat-with-computer.png';
 
-
-
-const PricingCard = ({ title, price, image, features }) => {
+const PricingCard = ({ title, price, image, features, onGetStarted }) => {
   return (
     <div className="pricing-card">
       <h2 className="card-title">{title}</h2>
       <div className="card-content">
         <div className="card-image-container">
-          {/* Ganti src dengan path gambar aslimu */}
           <img src={image} alt={title} className="card-image" />
         </div>
         <ul className="feature-list">
@@ -24,44 +24,64 @@ const PricingCard = ({ title, price, image, features }) => {
       <div className="card-footer">
         <p className="includes-text">What's Includes :</p>
         <p className="price-text">${price}/mo</p>
-        <button className="get-started-btn">Get Started</button>
+        <button className="get-started-btn" onClick={onGetStarted}>Get Started</button>
       </div>
     </div>
   );
 };
 
 const Pricing = () => {
+  const handleGetStarted = () => {
+    const el = document.getElementById("contact");
+    if (el) {
+      const offset = 80;
+      const top = el.getBoundingClientRect().top + document.body.scrollTop - offset;
+      document.body.scrollTo({ top, behavior: "smooth" });
+    }
+  };
+
   const tiers = [
     {
-      title: 'STANDARD',
-      price: '19.99',
-      image: '/cat-with-cupcake.png',
-      features: ['Warehouse', 'Dashboard', 'Cashier']
+      title: "STANDARD",
+      price: "19.99",
+      image: standardImg,
+      features: ["Warehouse", "Dashboard", "Cashier"],
     },
     {
-      title: 'MEDIUM',
-      price: '29.99',
-      image: '/cat-with-box.png',
-      features: ['Warehouse', 'Dashboard', 'Cashier', 'Auto-Restock']
+      title: "MEDIUM",
+      price: "29.99",
+      image: mediumImg,
+      features: ["Warehouse", "Dashboard", "Cashier", "Auto-Restock"],
     },
-
-   {
-    title: 'FULL',
-    price: '39.99',
-    image: '/cat-with-computer.png',
-    features: ['Warehouse', 'Dashboard', 'Cashier', 'Auto-Restock', 'Vending Machine']
-  }
+    {
+      title: "FULL",
+      price: "39.99",
+      image: fullImg,
+      features: [
+        "Warehouse",
+        "Dashboard",
+        "Cashier",
+        "Auto-Restock",
+        "Vending Machine",
+      ],
+    },
   ];
 
   return (
-    <div className="pricing-container">
-      <h1 className="main-title">SIMPLE<br />PRICING</h1>
-      <div className="cards-wrapper">
-        {tiers.map((tier, index) => (
-          <PricingCard key={index} {...tier} />
-        ))}
+    <section id="pricing">
+      <div className="pricing-container">
+        <h1 className="main-title">
+          SIMPLE
+          <br />
+          PRICING
+        </h1>
+        <div className="cards-wrapper">
+          {tiers.map((tier, index) => (
+            <PricingCard key={index} {...tier} onGetStarted={handleGetStarted} />
+          ))}
+        </div>
       </div>
-    </div>
+    </section>
   );
 };
 

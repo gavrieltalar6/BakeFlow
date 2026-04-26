@@ -31,6 +31,7 @@ function Footer() {
           <li><a href="/articles">Articles</a></li>
           <li><a href="/contact">Contact</a></li>
           <li><a href="/design-system">Design System</a></li>
+          <li><a href="/our-team">Our Team</a></li>
         </ul>
       </div>
 
