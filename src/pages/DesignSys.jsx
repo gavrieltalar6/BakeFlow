@@ -4,13 +4,19 @@ import colorImg from '../assets/images/color.png';
 import logoImg from '../assets/images/logo.png';
 import iconImg from '../assets/images/icon.png';
 import ButtonStyle from '../assets/images/ButtonStyle.png';
+import ButtonStyle2 from '../assets/images/ButtonStyle 2.png';
+import ButtonStyle3 from '../assets/images/ButtonStyle 3.png';
 import componentImg from '../assets/images/component.png';
+import componentImg2 from '../assets/images/component 2.png';
+import componentImg3 from '../assets/images/component 3.png';
 import cupcakeTopLeftImg from '../assets/images/cat-right.png';
 import cupcakeTopRightImg from '../assets/images/cat-left.png';
 import windowImg from '../assets/images/cat-with-box.png';
 import cakeSliceImg from '../assets/images/threecat.png';
 import cupcakeBottomRightImg from '../assets/images/stiker.fitures.png';
 import boxStackImg from '../assets/images/stiker.fitures.png';
+import unicase from '../assets/images/Unicase.png';
+import swash from '../assets/images/Swash.png';
 
 const DesignSys = () => {
   return (
@@ -65,17 +71,47 @@ const DesignSys = () => {
 
         {/* COMPONENT */}
         <h2 style={styles.sectionTitle}>Component</h2>
+
+        <p style={styles.desc}>
+          <b>Class:</b> nav-links <br />
+        </p>
         <img src={componentImg} alt="component" style={styles.image} />
+
+        <p style={styles.desc}>
+        <b>Class:</b> feature-card<br />
+        </p>
+        <img src={componentImg2} alt="component" style={styles.image} />
+
+        <p style={styles.desc}>
+          <b>Class:</b> pricing-card<br />
+        </p>
+        <img src={componentImg3} alt="component" style={styles.image} />
 
         {/* Button Style */}
         <h2 style={styles.sectionTitle}>Button Style</h2>
+
+        <p style={styles.desc}>
+        <b>Class:</b> hero-btn<br />
+        </p>
         <img src={ButtonStyle} alt="Button" style={styles.image} />
+
+        <p style={styles.desc}>
+        <b>Class:</b> get-started-btn<br />
+        </p>
+        <img src={ButtonStyle2} alt="Button" style={styles.image} />
+
+        <p style={styles.desc}>
+        <b>Class:</b> contact-form button<br />
+        </p>
+        <img src={ButtonStyle3} alt="Button" style={styles.image} />
 
         {/* TYPOGRAPHY */}
         <h2 style={styles.sectionTitle}>Typography</h2>
         <p style={styles.desc}>
           <b>Judul:</b> Delius Unicase Karena Bentuknya yang bagus dan santai di gunakan untuk menulis Judul <br />
+          <img src={unicase} alt="Button" style={styles.image} />
           <b>Isi:</b> Delius Swash Caps Kami menggunakan font Delius Swash Caps karena memiliki bentuk huruf kapital dengan elemen dekoratif (swash) yang memberikan kesan elegan namun tetap playful. <br />
+          <img src={swash} alt="Button" style={styles.image} />
           <b>Ukuran teks :</b> menggunakan kelipatan 4 untuk menjaga konsistensi.
         </p>
       </div>
