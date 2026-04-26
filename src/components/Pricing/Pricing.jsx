@@ -23,7 +23,7 @@ const PricingCard = ({ title, price, image, features, onGetStarted }) => {
       </div>
       <div className="card-footer">
         <p className="includes-text">What's Includes :</p>
-        <p className="price-text">${price}/mo</p>
+        <p className="price-text">{price}/month</p>
         <button className="get-started-btn" onClick={onGetStarted}>Get Started</button>
       </div>
     </div>
@@ -43,19 +43,19 @@ const Pricing = () => {
   const tiers = [
     {
       title: "STANDARD",
-      price: "19.99",
+      price: "299.000,00",
       image: standardImg,
       features: ["Warehouse", "Dashboard", "Cashier"],
     },
     {
       title: "MEDIUM",
-      price: "29.99",
+      price: "499.000,00",
       image: mediumImg,
       features: ["Warehouse", "Dashboard", "Cashier", "Auto-Restock"],
     },
     {
       title: "FULL",
-      price: "39.99",
+      price: "799.000,00",
       image: fullImg,
       features: [
         "Warehouse",

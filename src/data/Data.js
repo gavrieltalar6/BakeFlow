@@ -56,20 +56,27 @@ export const featuresData = [
   {
     id: 1,
     title: "INPUT YOUR PRODUCTS & INGREDIENTS",
-    description: "Input your products, finished goods, and ingredients for tracking.",
-    images: [cake1, papanTulis, catDekatPapan] 
+    images: [
+      "src/assets/images/papantulis.png" 
+    ],
+    description: "Input your products, finished goods, and ingredients for tracking."
   },
   {
     id: 2,
     title: "COMPATIBLE WITH AUTOMATED RETAILING",
-    description: "Track your vending machines/other automated sales",
-    images: [threeCat, windowImg]
+
+    images: [
+      "src/assets/images/catdekatpapan.png"
+    ],
+    description: "Track your vending machines/other automated sales."
   },
   {
     id: 3,
     title: "AUTOMATIC STOCK MANAGEMENT",
-    description: "Real-time automatic inventory tracking as orders come in",
-    images: [catTengah, cake2, stikerRight]
+    images: [
+      "src/assets/images/cat-leftfitures.png"
+    ],
+    description: "Real-time automatic inventory tracking as orders come in."
   }
 ];
 
