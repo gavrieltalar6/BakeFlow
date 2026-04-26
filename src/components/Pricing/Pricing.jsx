@@ -23,7 +23,7 @@ const PricingCard = ({ title, price, image, features, onGetStarted }) => {
       </div>
       <div className="card-footer">
         <p className="includes-text">What's Includes :</p>
-        <p className="price-text">{price}/month</p>
+        <p className="price-text">Rp. {price}/month</p>
         <button className="get-started-btn" onClick={onGetStarted}>Get Started</button>
       </div>
     </div>
