@@ -2,10 +2,23 @@ import React from 'react';
 import { featuresData } from '../../data/Data';
 import './Workflow.css';
 
+import cupcakeImg from "../../assets/images/cake2.png";
+import cakeImg from "../../assets/images/cake2.png";
+import mangosteenImg from "../../assets/images/cake1.png";
+
 const Workflow = () => {
   return (
     <div className="workflow-container">
-      <h2 className="workflow-title"></h2>
+      <img src={cupcakeImg} className="deco-item cupcake-left" alt="Cupcake" />
+      <img src={cakeImg} className="deco-item cake-right" alt="Cake Slice" />
+      <img src={cupcakeImg} className="deco-item cupcake-bottom" alt="Cupcake Pink" />
+      <img src={cakeImg} className="deco-item cake-bottom-right" alt="Cake Decoration" />
+      <img src={mangosteenImg} className="deco-item deco-mini mini-1" alt="" />
+      <img src={cupcakeImg} className="deco-item deco-mini mini-2" alt="Cupcake" />
+      <img src={mangosteenImg} className="deco-item deco-mini mini-3" alt="" />
+
+      <h2 className="workflow-title">Workflow Kami</h2>
+
       <div className="workflow-grid">
         {featuresData.map((item) => (
           <div key={item.id} className={`feature-card card-${item.id}`}>
@@ -16,7 +29,7 @@ const Workflow = () => {
                   <img 
                     key={index} 
                     src={imgSrc} 
-                    alt="workflow-art" 
+                    alt="art" 
                     className={`workflow-img img-${fileName}`} 
                   />
                 );

@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Delius+Swash+Caps&family=Delius+Unicase:wght@400;700&display=swap');
+
 .features-section {
   padding: 80px 40px;
   background-color: #FFFFFF; 
@@ -6,30 +8,38 @@
   align-items: center;
   position: relative;
   overflow: hidden;
+  font-family: 'Delius Swash Caps', cursive;
 }
 
 .features-header {
   text-align: center;
-  margin-bottom: 50px;
+  margin-bottom: 40px;
+  z-index: 1;
 }
 
 .features-header h2 {
+  font-family: 'Delius Unicase', cursive;
   font-size: 2.5rem;
-  color: #000000; 
+  color: #ff6090; 
   margin-bottom: 15px;
+  text-transform: uppercase;
 }
 
 .features-header p {
   max-width: 600px;
-  color: #000000; 
+  color: #333; 
   line-height: 1.6;
+  font-size: 1.1rem;
 }
 
 .features-container {
   display: flex;
   justify-content: center;
-  gap: 30px;
   flex-wrap: wrap;
+  gap: 30px; 
+  width: 100%;
+  max-width: 1200px;
+  z-index: 1;
 }
 
 .feature-card {
@@ -42,29 +52,67 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s;
+}
+
+.feature-card:hover {
+  transform: scale(1.02);
 }
 
 .feature-card img {
   width: 140px;
   margin-bottom: 20px;
+  object-fit: contain;
 }
 
 .feature-card h3 {
-  color: #000000; 
+  font-family: 'Delius Unicase', cursive;
+  color: #ff6090; 
   margin-bottom: 10px;
-  font-size: 1.2rem;
+  font-size: 1.4rem;
+  border-bottom: 2px solid #ff6090;
+  width: 100%;
+  padding-bottom: 5px;
 }
 
 .feature-card p {
   color: #000000; 
-  font-size: 0.9rem;
+  font-size: 1rem;
   line-height: 1.4;
+}
+@media (max-width: 768px) {
+  .features-section {
+    padding: 40px 15px !important;
+  }
+
+  .features-header h2 {
+    font-size: 2rem;
+  }
+
+  .features-container {
+    display: flex !important;
+    flex-direction: column !important; 
+    align-items: center !important;   
+    gap: 15px !important;            
+  }
+
+  .feature-card {
+    width: 90% !important;             
+    max-width: 340px;
+    margin: 0 !important;            
+    padding: 25px 20px;
+  }
 }
 
 .bg-sticker {
   position: absolute;
   width: 140px;
+  z-index: 0;
+  pointer-events: none;
+  opacity: 0.6;
 }
+
 .s1 { top: 30px; left: 30px; }
 .s2 { top: 30px; right: 30px; }
 .s3 { bottom: 30px; left: 30px; }
