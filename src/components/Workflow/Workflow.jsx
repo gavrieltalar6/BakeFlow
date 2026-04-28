@@ -17,7 +17,7 @@ const Workflow = () => {
       <img src={cupcakeImg} className="deco-item deco-mini mini-2" alt="Cupcake" />
       <img src={mangosteenImg} className="deco-item deco-mini mini-3" alt="" />
 
-      <h2 className="workflow-title">Workflow Kami</h2>
+      <h2 className="workflow-title">Workflow</h2>
 
       <div className="workflow-grid">
         {featuresData.map((item) => (
