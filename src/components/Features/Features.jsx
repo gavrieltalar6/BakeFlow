@@ -1,18 +1,8 @@
 import { data } from '../../data/Data';
 import "./Features.css";
-
-import catLeft from "../../assets/images/cat-leftfitures.png";
-import catMid from "../../assets/images/cat.midfitures.png";
-import catRight from "../../assets/images/cat.rightfitures.png";
 import sticker from "../../assets/images/stiker.fitures.png";
 
 function Features() {
-  const images = {
-    "cat-leftfitures.png": catLeft,
-    "cat.midfitures.png": catMid,
-    "cat.rightfitures.png": catRight
-  };
-
   return (
     <section className="features-section" id="features">
       <div className="features-header">
@@ -23,7 +13,7 @@ function Features() {
       <div className="features-container">
         {data.map((item) => (
           <div key={item.id} className="feature-card">
-            <img src={images[item.img]} alt={item.title} />
+            <img src={item.img} alt={item.title} />
             <h3>{item.title}</h3>
             <p>{item.desc}</p>
           </div>

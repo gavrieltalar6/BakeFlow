@@ -9,25 +9,26 @@ import windowImg from '../assets/images/window.png';
 import catMascot from "../assets/images/cat.midfitures.png";
 import catArticle2 from "../assets/images/cat.rightfitures.png";
 import cupcat from "../assets/images/cat-with-cupcake.png";
+import catLeft from '../assets/images/cat-leftfitures.png';
 
 export const data = [
   { 
     id: 1, 
     title: "ORDERS", 
     desc: "See what sells and what doesn't. Analyze trend, set prices, and spot opportunities. Data that actually helps you make decisions.", 
-    img: "cat-leftfitures.png" 
+    img: catLeft
   },
   { 
     id: 2, 
     title: "SALES", 
     desc: "Take orders online or in person. Organize them by date, customer, or type. Print labels, track progress, and deliver on time.", 
-    img: "cat.midfitures.png" 
+    img: catMascot
   },
   { 
     id: 3, 
     title: "AUTOMATIC STOCK MANAGEMENT", 
     desc: "Track inventory in real time as orders come in.", 
-    img: "cat.rightfitures.png" 
+    img: catArticle2
   }
 ];
 
@@ -56,26 +57,19 @@ export const featuresData = [
   {
     id: 1,
     title: "INPUT YOUR PRODUCTS & INGREDIENTS",
-    images: [
-      "src/assets/images/papantulis.png" 
-    ],
+    images: [cake1, papanTulis, catDekatPapan],
     description: "Input your products, finished goods, and ingredients for tracking."
   },
   {
     id: 2,
     title: "COMPATIBLE WITH AUTOMATED RETAILING",
-
-    images: [
-      "src/assets/images/catdekatpapan.png"
-    ],
+    images: [threeCat, windowImg],
     description: "Track your vending machines/other automated sales."
   },
   {
     id: 3,
     title: "AUTOMATIC STOCK MANAGEMENT",
-    images: [
-      "src/assets/images/cat-leftfitures.png"
-    ],
+    images: [catTengah, cake2, stikerRight],
     description: "Real-time automatic inventory tracking as orders come in."
   }
 ];
@@ -109,7 +103,6 @@ export const ARTICLES = [
 
 export const MASCOT = catMascot;
 
-import catLeft from '../assets/images/cat-leftfitures.png';
 export const reviewsData = [
   {
     id: 1,
@@ -132,4 +125,4 @@ export const reviewsData = [
     text: "No more lost orders. No more surprises. Everything runs clean, and i sleep better at night",
     img: catMascot
   }
-]
+];
